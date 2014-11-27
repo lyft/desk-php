@@ -1,0 +1,14 @@
+extends: list
+summary: Retrieve a paginated list of topics for a brand
+uri: "brands/{brand_id}/topics"
+responseClass: BrandTopicsPage
+parameters:
+    brand_id:
+        extends: id
+        description: The ID of the brand to retrieve articles for
+        required: true
+        location: uri
+data:
+    embeds:
+        entries:
+            model: TopicModel
