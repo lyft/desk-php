@@ -23,6 +23,18 @@ list:
             type: integer
             minimum: 1
             location: query
+search:
+    extends: list
+    parameters:
+        sort_field:
+            description: Field name on which you would like to sort
+            type: string
+            location: query
+        sort_direction:
+            description: direction to sort
+            type: string
+            enum: ['asc', 'desc']
+            location: query
 show:
     extends: embeddable
     httpMethod: GET

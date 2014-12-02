@@ -1,4 +1,4 @@
-extends: list
+extends: search
 summary: Search public articles with pagination
 uri: articles/search
 responseClass: SearchArticlesPage
@@ -11,4 +11,13 @@ parameters:
         description: Topic IDs to filter results by
         type: array
         items: { extends: id }
-        location: "query"
+        location: query
+    brand_ids:
+        description: List of brand ids to filter results.
+        type: array
+        items: { extends: id }
+        location: query
+    in_support_center:
+        description: Boolean parameter to limit search to articles that appear in support center.
+        type: boolean
+        location: query
