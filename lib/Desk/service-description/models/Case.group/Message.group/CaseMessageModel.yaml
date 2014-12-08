@@ -22,3 +22,13 @@ properties:
         data:
             operation: ShowCase
             pattern: "#/cases/(?P<id>[0-9]+)$#"
+    topic:
+        location: links
+        data:
+            operation: ShowTopic
+            pattern: "#/topics/(?P<id>[0-9]+)$#"
+    customer:
+        location: links
+        data:
+            operation: ShowCustomer
+            pattern: "#/customers/(?P<id>[0-9]+)$#"
